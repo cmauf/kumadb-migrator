@@ -495,7 +495,7 @@ def migrate_sqlite_to_mysql(sqlite_db_path, mysql_config):
 # --- Configuration ---
 SQLITE_DB = 'kuma.db'  ## database file of sqlite
 mysql_connection_config = {
-    'host': "127.0.0.1",  ## change to remote mysql host
+    'host': "localhost",  ## change to remote mysql host
     'user': MARIADB_USER,  ## database user
     'password': MARIADB_PASSWORD,  ### password
     'database': "kumadb"  ## database name
