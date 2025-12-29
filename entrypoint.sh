@@ -23,6 +23,7 @@ echo "==> Creating database and user"
 mariadb --socket=/run/mysqld/mysqld.sock <<EOF
 CREATE DATABASE IF NOT EXISTS kumadb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 CREATE USER IF NOT EXISTS '${MARIADB_USER}'@'%' IDENTIFIED BY '${MARIADB_PASSWORD}';
+CREATE USER IF NOT EXISTS '${MARIADB_USER}'@'localhost' IDENTIFIED BY '${MARIADB_PASSWORD}';
 GRANT ALL PRIVILEGES ON kumadb.* TO '${MARIADB_USER}'@'%';
 GRANT ALL PRIVILEGES ON kumadb.* TO '${MARIADB_USER}'@'localhost';
 FLUSH PRIVILEGES;
