@@ -12,10 +12,8 @@ import sys
 from typing import Optional
 import mysql.connector
 
-MARIADB_HOST = getenv("MARIADB_HOST", "localhost")
 MARIADB_USER = getenv("MARIADB_USER", "kuma")  ## database user
 MARIADB_PASSWORD = getenv("MARIADB_PASSWORD", "secret")  ### password
-MARIADB_DB = getenv("MARIADB_DB", "kumadb")  ## database name
 
 DB: dict[str, Optional[object]] = {
     "sqlite_conn": None,
@@ -497,10 +495,10 @@ def migrate_sqlite_to_mysql(sqlite_db_path, mysql_config):
 # --- Configuration ---
 SQLITE_DB = 'kuma.db'  ## database file of sqlite
 mysql_connection_config = {
-    'host': MARIADB_HOST,  ## change to remote mysql host
+    'host': "127.0.0.1",  ## change to remote mysql host
     'user': MARIADB_USER,  ## database user
     'password': MARIADB_PASSWORD,  ### password
-    'database': MARIADB_DB  ## database name
+    'database': "kumadb"  ## database name
 }
 
 # --- Run the migration ---
