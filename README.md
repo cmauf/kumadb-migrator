@@ -1,5 +1,9 @@
 # Uptimekuma Migration SQLite to MariaDB
 
+[![Pylint](https://github.com/cmauf/kumadb-migrator/actions/workflows/pylint.yml/badge.svg)](https://github.com/cmauf/kumadb-migrator/actions/workflows/pylint.yml)
+[![CodeQL](https://github.com/cmauf/kumadb-migrator/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main)](https://github.com/cmauf/kumadb-migrator/actions/workflows/github-code-scanning/codeql)
+[![Build & publish Docker image to GHCR](https://github.com/cmauf/kumadb-migrator/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/cmauf/kumadb-migrator/actions/workflows/docker-publish.yml)
+
 This project is aimed to provide a seamless migration of an Uptime Kuma database from SQLite to MariaDB.
 
 ## Preface
