@@ -129,7 +129,7 @@ def establish_db_connections(sqlite_db_path, mysql_config):
     try:
         DB["mysql_conn"] = mysql.connector.connect(**mysql_config)
         DB["mysql_cursor"] = DB["mysql_conn"].cursor()
-        print(f"Connected to MySQL database: kumadb")
+        print("Connected to MySQL database: kumadb")
     except mysql.connector.Error as e:
         if DB["sqlite_cursor"]:
             DB["sqlite_cursor"].close()
